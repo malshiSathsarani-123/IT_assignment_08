@@ -31,19 +31,15 @@
         let box = [document.getElementById("upBox"), document.getElementById("box1"), document.getElementById("box2"), document.getElementById("box3"), document.getElementById("box4"), document.getElementById("downBox")];
         let colors = ["red", "yellow", "green", "blue", "deeppink", "orange"];
 
-        setInterval(function(){
-
+        const myFunction = () =>{
             for(let i = 0; i < 6; i++){
                 box[i].style.backgroundColor = colors[i];
                 box[i].style.border = "solid 2px black";
             }
-
             colors.unshift(colors[5]);
             colors.pop();
-
-        }, 1000);
-
-
+        };
+        setInterval(myFunction,1000)
     </script>
 
 </body>
